@@ -1,0 +1,104 @@
+
+body {
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+    line-height: 1.5;
+    color: #000000;
+    background-color: antiquewhite;
+  }
+  
+  header {
+  
+    color: #000000;
+    background-color: antiquewhite;
+    padding: 1rem 0;
+    text-align: center;
+
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    color: #000000;
+    padding: 0.5rem;
+  }
+  nav a {
+    color: #000000;
+    text-decoration: none;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    transition: background 0.3s;
+  }
+  nav a:hover {
+    background: #fffefe;
+  }
+  
+
+
+  section {
+    padding: 2rem;
+    text-align: center;
+  }
+  #about {
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem;
+    padding: auto;
+  }
+  #projects {
+    background: #f3f2d2;
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem;
+    padding: auto;
+  }
+  .project {
+    margin: 1rem 0;
+    padding: 4rem;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    background-color: rgb(207, 218, 220);
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    background: #aaa5a5;
+    padding: 2rem;
+    border-radius: 50px;
+  }
+  input, textarea {
+    margin: 0.5rem 0;
+    padding: 1.0rem;
+    border: 1px solid #ffffff;
+    border-radius: 25px;
+  }
+  button {
+    background: #ffffff;
+    background-color: rgb(82, 141, 50);
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background 0.3s;
+    font-size: medium;
+  }
+  button:hover {
+    background: #7cd213;
+  }
+  
+
+
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+  }
+  
