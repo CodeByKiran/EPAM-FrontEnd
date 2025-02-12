@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM and BOM Operations</title>
+</head>
+<body>
+    <h1 id="title">DOM and BOM Operations</h1>
+    <button id="addButton">Add Content</button>
+    <button id="removeButton">Remove Content</button>
+    <div id="content">
+        <p class="highlight">This is an example paragraph.</p>
+    </div>
+    <script>
+
+        const title = document.getElementById("title");
+        title.textContent = "Learn DOM and BOM Operations";
+
+
+        const addButton = document.getElementById("addButton");
+        const removeButton = document.getElementById("removeButton");
+        const content = document.getElementById("content");
+
+        addButton.addEventListener("click", () => {
+            const newPara = document.createElement("p");
+            newPara.textContent = "This is a new paragraph added dynamically.";
+            newPara.classList.add("highlight");
+            content.appendChild(newPara);
+        });
+
+        removeButton.addEventListener("click", () => {
+            if (content.lastChild) {
+                content.removeChild(content.lastChild);
+            } else {
+                alert("No more content to remove!");
+            }
+        });
+
+  
+        window.alert("Welcome to the DOM and BOM Operations Demo!");
+
+        // BOM - Navigating URL and Window       console.log("Current URL:", window.location.href);
+        console.log("Browser Width:", window.innerWidth, "Height:", window.innerHeight);
+
+        // BOM - Working with the Console
+        console.log("User Agent:", window.navigator.userAgent);
+
+        // BOM - Timing functions
+        setTimeout(() => {
+            console.log("This message appears after 3 seconds.");
+        }, 3000);
+
+        const interval = setInterval(() => {
+            console.log("Interval message - runs every 2 seconds.");
+        }, 2000);
+
+        // Stop interval after 8 seconds
+        setTimeout(() => {
+            clearInterval(interval);
+            console.log("Interval stopped.");
+        }, 8000);
+    </script>
+</body>
+</html>

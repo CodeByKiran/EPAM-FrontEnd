@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basic Syntax</title>
+</head>
+<body>
+    <h1 id="title">JavaScript Basics</h1>
+    <button id="changeTextButton">Change Text</button>
+    <div id="result"></div>
+
+    <script>
+        //  Variables
+        let message = "Hello, World!";
+        const pi = 3.14; 
+
+        console.log(message); 
+        console.log("Value of pi:", pi);
+
+        // Functions
+        function greet(name) {
+            return `Hello, ${name}!`;
+        }
+
+        const greeting = greet("Alice");
+        console.log(greeting);
+
+        // Conditional Statements
+        const number = 10;
+
+        if (number > 5) {
+            console.log("The number is greater than 5");
+        } else {
+            console.log("The number is 5 or less");
+        }
+
+        for (let i = 1; i <= 5; i++) {
+            console.log("Count:", i);
+        }
+
+        const button = document.getElementById("changeTextButton");
+        const resultDiv = document.getElementById("result");
+
+        button.addEventListener("click", () => {
+            const title = document.getElementById("title");
+            title.textContent = "JavaScript is Fun!";
+            resultDiv.innerHTML = "<p>The text has been changed!</p>";
+        });
+
+        // 6. Arrays and Loops
+        const fruits = ["Apple", "Banana", "Cherry"];
+        fruits.forEach((fruit) => {
+            console.log("Fruit:", fruit);
+        });
+
+        // 7. Objects
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 25,
+            fullName: function () {
+                return `${this.firstName} ${this.lastName}`;
+            },
+        };
+
+        console.log("Person's full name:", person.fullName());
+    </script>
+</body>
+</html>

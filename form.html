@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Input Example</title>
+</head>
+<body>
+    <h1>JavaScript Input Example</h1>
+    
+    <form id="userForm">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" placeholder="Your name here" required />
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="output"></div>
+
+    <script>
+        const form = document.getElementById("userForm");
+        const nameInput = document.getElementById("name"); 
+        const output = document.getElementById("output");
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault(); 
+            const name = nameInput.value; 
+            console.log(document.getElementById("name").value.trim()); 
+            console.log(name);
+            output.innerHTML = `<p>Hello, <strong>${name}</strong>! Welcome to the website.</p>`;
+        });
+        
+    </script>
+</body>
+</html>
